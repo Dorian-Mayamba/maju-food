@@ -1,0 +1,11 @@
+:root{
+    --link-font-size:1.1rem;
+    --link-font-size-475:0.775rem;
+    --link-font-size-400:0.66rem;
+}
+
+@media screen and (min-width:1370px){
+    *{
+        font-size:var(--link-font-size);
+    }
+}

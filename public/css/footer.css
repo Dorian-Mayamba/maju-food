@@ -1,0 +1,21 @@
+@import url('header.css');
+
+.footer{
+    font-size:var(--link-font-size);
+}
+
+@media screen and (max-device-width:475px){
+    .footer{
+        font-size: var(--link-font-size-475);
+    }
+}
+
+@media screen and (max-device-width:400px){
+    .footer{
+        font-size: var(--link-font-size-400);
+    }
+}
+
+.footer > nav > ul > li > .nav-link{
+    display: unset;
+}

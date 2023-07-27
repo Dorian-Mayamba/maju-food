@@ -1,0 +1,74 @@
+:root{
+    --bg-h-size:65vh;
+    --bg-h-size-720:75vh;
+}
+
+
+#banner{
+    height: var(--bg-h-size);
+    background-color: rgba(0,0,0,0.4);
+}
+
+#banner > .bg-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+
+.network-banner > picture > img, .network-banner > picture > source{
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+
+
+@media screen and (max-device-width:575px) {
+
+    .networking-section{
+        height: 45vh;
+    }
+    
+    .networking-section > .networking-content > .col-md-4{
+        position: relative;
+    }
+
+    .networking-section > .networking-content > .col-md-4 > .w-25{
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .networking-section > .networking-content > .col-md-4:nth-child(2) > .w-25{
+        top: 12vh;
+    }
+
+    .networking-section > #return-link-section > .col-md-4{
+        position: relative;
+    }
+
+    .networking-section > #return-link-section > .col-md-4 > .return-link{
+        position: absolute;
+        top: 23vh;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+@media screen and (max-device-width:400px){
+
+    .networking-section > .networking-content > .col-md-4:nth-child(2) > .w-25{
+        top:10vh;
+    }
+
+    .networking-section > #return-link-section > .col-md-4 > .return-link{
+        top:19.7vh;
+    }
+}
+
+@media screen and (max-device-width:380px) {
+
+    .networking-section > #return-link-section > .col-md-4 > .return-link > a{
+        font-size: 1.05rem;
+    }
+}
+
