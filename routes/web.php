@@ -1,9 +1,9 @@
 <?php
 
 use App\Http\Controllers\Admin\AddCategoryController;
-use App\Http\Controllers\Admin\AddMealMealController;
+use App\Http\Controllers\Admin\AddMealController;
 use App\Http\Controllers\IndexController;
-use App\Http\Controllers\MenuController;
+use App\Http\Controllers\MealController;
 use App\Http\Middleware\Admin;
 use Illuminate\Support\Facades\Route;
 
@@ -22,9 +22,17 @@ Route::get('/', [IndexController::class,'index'])->name('home');
 
 Auth::routes();
 
-Route::get('/menu', [MenuController::class,'showMenu'])->name('menu');
+Route::get('/menu', [MealController::class,'showMenu'])->name('menu');
 
+
+
+
+// ---------------------------------------Admin Routes ----------------------------------
 Route::middleware([Admin::class])->group(function(){
+    //----------------------------------Category Routes ---------------------------------
     Route::get('/category-create', [AddCategoryController::class, 'showAddCategoryForm'])->name('create-category');
-    Route::get('/meal-create', [AddMealMealController::class, 'showAddMealForm'])->name('create-meal');
+    Route::post('/category-create', [AddCategoryController::class, 'addCategory']);
+    //----------------------------------Meals Routes-------------------------------------
+    Route::get('/meal-create', [AddMealController::class, 'showAddMealForm'])->name('create-meal');
+    Route::post('/meal/create', [AddMealController::class,'addMeal']);
 });
