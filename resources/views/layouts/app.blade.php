@@ -74,13 +74,13 @@
                                     </form>
                                 </ul>
                             </li>
-                        @else
+                        {{-- @else
                             <li class="nav-item px-3">
                                 <a href="{{ route('register') }}" class="nav-link">S'enregistrer</a>
                             </li>
                             <li class="nav-item px-3">
                                 <a href="{{ route('login') }}" class="nav-link">Se connecter</a>
-                            </li>
+                            </li> --}}
                         @endif
                     </ul>
                 </div>
@@ -95,8 +95,6 @@
                     </p>
                 </div>
             @endif
-
-            
             @yield('content')
         </main>
         <footer class="footer">
