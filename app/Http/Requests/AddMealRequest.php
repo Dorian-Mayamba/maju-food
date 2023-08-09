@@ -28,7 +28,8 @@ class AddMealRequest extends FormRequest
             'meal_name' => ['required', 'string'],
             'meal_description' => ['required', 'string'],
             'meal_image' => ['required', 'file', 'mimes:jpg,bmp,png'],
-            'meal_category' => ['required', 'string']
+            'meal_category' => ['required', 'string'],
+            'price' => ['required']
         ];
     }
 

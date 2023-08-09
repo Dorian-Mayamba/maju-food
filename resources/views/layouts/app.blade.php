@@ -88,6 +88,15 @@
         </nav>
 
         <main class="py-4">
+            @if(Session::has('success'))
+                <div class="alert alert-success">
+                    <p>
+                        <strong>{{ Session::get('success') }}</strong>
+                    </p>
+                </div>
+            @endif
+
+            
             @yield('content')
         </main>
         <footer class="footer">
@@ -111,7 +120,9 @@
 @yield('extra-js')
     <script type="text/javascript">
         $(document).ready(function(){
-            console.log('ready');
+            setTimeout(() => {
+                $('.alert').fadeOut('slow');
+            }, 4000);
         })
     </script>
 </body>

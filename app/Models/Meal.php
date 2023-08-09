@@ -11,7 +11,7 @@ class Meal extends Model
     use HasFactory;
 
 
-    protected $fillable = ['meal_name', 'meal_description', 'meal_image', 'category_id'];
+    protected $fillable = ['meal_name', 'meal_description', 'meal_image','price', 'category_id'];
     /**
      *
      * @return BelongsTo
