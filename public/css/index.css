@@ -1,8 +1,11 @@
 :root{
-    --bg-h-size:65vh;
+    --bg-h-size:75vh;
     --bg-h-size-720:75vh;
-    --bg-h-size-300:95vh;
+    --bg-h-size-400:130vh;
     --bg-color:rgba(0,0,0,0.4);
+    --banner-width-1200:60%;
+    --banner-width-950:100%;
+    --bg-h-size-468:110vh;
 }
 
 
@@ -13,7 +16,7 @@
 }
 
 #banner > .bg-image img{
-    width: 75%;
+    width: var(--banner-width-1200);
     height: 100%;
     object-fit: fill;
 }
@@ -25,21 +28,34 @@
 }
 
 .network-banner > picture > img, .network-banner > picture > source{
-    width: 75%;
+    width: var(--banner-width-1200);
     height: 100%;
     object-fit: fill;
 }
 
-@media screen and (max-device-width:768px) and (max-device-height:300px) {
+@media screen and (max-device-width:930px) and (max-device-height:468px){
     #banner{
-        height: var(--bg-h-size-300);
+        height: var(--bg-h-size-468);
         
     }
     .network-banner{
-        height: var(--bg-h-size-300);
-        
+        height: var(--bg-h-size-468);
+    }
+
+    #banner > .bg-image img{
+        width: var(--banner-width-950);
+        height: 100%;
+        object-fit: fill;
+    }
+
+    .network-banner > picture > img, .network-banner > picture > source{
+        width: var(--banner-width-950);
+        height: 100%;
+        object-fit: fill;
     }
 }
+
+
 
 @media screen and (max-device-width:768px) {
     #banner > .bg-image img{

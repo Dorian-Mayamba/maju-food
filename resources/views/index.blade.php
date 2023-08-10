@@ -4,7 +4,8 @@
     <div class="jumbotron" id="banner">
         <div class="bg-image h-100">
             <picture>
-                <source media="(min-device-width: 720px)" srcset="{{ asset('images/food-bg-full-screen.jpg') }}">
+                {{-- <source media="(min-device-width: 720px)" srcset="{{ asset('images/food-bg-full-screen.jpg') }}"> --}}
+                <source media="(min-device-width: 810px )" srcset="{{ asset('images/food-bg.jpeg') }}">
                 <img src="{{ asset('images/food-bg.jpeg') }}" alt="food-bg">
             </picture>
         </div>
