@@ -2,7 +2,7 @@
 deployment:
   example_env_file: .env.example
   tasks:
-    - export DEPLOYPATH=/home/itym9981
+    - export DEPLOYPATH=/home/itym9981/maju-food.fr
     - /bin/touch .env
     - /bin/cp $example_env_file .env
     - /bin/cp -r * $DEPLOYPATH
