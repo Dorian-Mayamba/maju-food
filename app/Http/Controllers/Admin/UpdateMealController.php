@@ -45,7 +45,7 @@ class UpdateMealController extends Controller
             $meal->update([
                 'meal_name' => $request->meal_name,
                 'meal_description' => $request->meal_description,
-                'meal_image' => "/Storage/" . $meal_image,
+                'meal_image' => "/storage/" . $meal_image,
                 'price' => $request->price,
                 'category_id' => $meal->category->id
             ]);
